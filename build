@@ -4,7 +4,7 @@ mainclass="wordcount"
 
 # DELETE TAR / CLEAR STAGING
 rm $tarname.tar
-rm -f STAGING/*
+rm -fr STAGING/*
 echo "gitkeep" > STAGING/git.keep
 # COPY EVERYTHING TO STAGING
 cp -r src/main/scala/*.scala -r input STAGING
