@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m/home/jonolds/cloud/cc7/STAGING/wordcount.scala:2:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/jonolds/cloud/cc7/STAGING/wordcount.scala:3:22: object io is not a member of package reflect[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.reflect.io.Directory[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/jonolds/cloud/cc7/STAGING/wordcount.scala:7:7: not found: type Directory[0m
+[0m[[0m[31merror[0m] [0m[0m		new Directory(new File("output")).deleteRecursively()[0m
+[0m[[0m[31merror[0m] [0m[0m		    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/jonolds/cloud/cc7/STAGING/wordcount.scala:8:12: not found: value SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m		val sc = SparkSession.builder.appName("wordcount").master("local").getOrCreate().sparkContext[0m
+[0m[[0m[31merror[0m] [0m[0m		         ^[0m
+[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
