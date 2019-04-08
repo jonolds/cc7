@@ -7,7 +7,7 @@ rm $tarname.tar
 rm -fr STAGING/*
 echo "gitkeep" > STAGING/git.keep
 # COPY EVERYTHING TO STAGING
-cp -r src/main/scala/ -r input STAGING
+cp -r src/ -r input STAGING
 cd STAGING
 # TEST - compile / put in jar / delete .class / run
 # sbt package
