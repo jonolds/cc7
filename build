@@ -1,20 +1,20 @@
 #!/bin/bash
-tarname="pa6_olds"
-mainclass="GraphSearch"
+tarname="pa7_olds"
+mainclass="wordcount"
 
 # DELETE TAR / CLEAR STAGING
 rm $tarname.tar
 rm -R STAGING/*
 # COPY EVERYTHING TO STAGING
-cp src/main/java/*.java -r input STAGING
+cp src/main/scala/*.scala -r input STAGING
 cd STAGING
 # TEST - compile / put in jar / delete .class / run
-javac *.java -Xlint:deprecation -d .
-jar -cvf TestJar.jar *.class
-hadoop jar TestJar.jar $mainclass input output
+sbt package
+# jar -cvf TestJar.jar *.class
+# hadoop jar TestJar.jar $mainclass input output
 # cat ./output/part-r-00000
 # CREATE TAR
-tar -cvf ../$tarname.tar *.java input output answer.txt
+tar -cvf ../$tarname.tar *.scala input output
 cd ..
 
 
